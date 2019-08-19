@@ -10,8 +10,8 @@ import (
 // Define struct of contacts
 type Contact struct {
 	First string `json:"first"`
-	Last  string `json:"last'`
-	Email string `"json: email"`
+	Last  string `json:"last"`
+	Email string `json:"email"`
 }
 
 // Declare global Contacts array (simulation database)
@@ -20,7 +20,7 @@ type Contacts []Contact
 func allContacts(w http.ResponseWriter, r *http.Request) {
 	contacts := Contacts{
 		Contact{First: "Test FirstName:", Last: "Test LastName:", Email: "Test Email:"},
-		Contact{First: "Kyle", Last: "Gallagher", Email: "kyle.gallagher@gmial.com"},
+		Contact{First: "Kyle", Last: "Gallagher", Email: "kyle.gallagher@gmail.com"},
 		Contact{First: "Dan", Last: "Green", Email: "<3u"},
 	}
 
