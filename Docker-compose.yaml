@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  contacts:
+    image: canthefason/go-watcher:latest
+    container_name: 'contacts'
+    ports:
+      - '8080:10000'
+    environment:
+      STAGE: 'docker-compose-land'
+    volumes:
+      - ~/go/src/github.com/moosecanswim/go-contacts:/go/src/github.com/moosecanswim/go-contacts
+    command: watcher -run github.com/moosecanswim/go-contacts --config github.com/moosecanswim/go-contacts/settings.toml --watch github.com/moosecanswim/go-contacts
